@@ -17,9 +17,9 @@ let
   canUseFetchGit = dotGitExists && isNix2;
   origPackage = builtins.fromJSON (builtins.readFile ./package.json);
   nameTable = {
-    mainnet = "Daedalus";
-    staging = "Daedalus Staging";
-    testnet = "Daedalus Testnet";
+    mainnet = "Daedalus AR";
+    staging = "Daedalus Staging AR";
+    testnet = "Daedalus Testnet AR";
   };
   newPackage = (origPackage // {
     productName = nameTable.${if cluster == null then "testnet" else cluster};

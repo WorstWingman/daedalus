@@ -174,9 +174,9 @@ let
 
     unsigned-windows-installer = let
       mapping = {
-        mainnet = "Daedalus";
-        staging = "Daedalus Staging";
-        testnet = "Daedalus Testnet";
+        mainnet = "Daedalus AR";
+        staging = "Daedalus Staging AR";
+        testnet = "Daedalus Testnet AR";
       };
       installDir = mapping.${cluster};
     in pkgs.runCommand "win64-installer-${cluster}" {

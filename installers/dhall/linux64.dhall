@@ -1,5 +1,5 @@
 \(cluster : ./cluster.type)      ->
-let dataDir = "\${XDG_DATA_HOME}/Daedalus/${cluster.name}"
+let dataDir = "\${XDG_DATA_HOME}/Daedalus/${cluster.name}-ar"
 in
 { name      = "linux64"
 , configurationYaml  = "\${DAEDALUS_CONFIG}/configuration.yaml"
