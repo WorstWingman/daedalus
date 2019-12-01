@@ -61,15 +61,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "iohk-nix": {
-        "branch": "niv-choco-merged",
+        "branch": "niv-daedalus",
         "description": "nix scripts shared across projects",
         "homepage": null,
         "owner": "input-output-hk",
         "repo": "iohk-nix",
-        "rev": "37ccc332bf6ce81da265e1004d10827738dc5909",
-        "sha256": "17z62kf5pffv9fh0r73l9jsj4k1ccahnp5y2sp326k4ndv9ji7m3",
+        "rev": "b5309d68dfef014e49301e2b3d6aa0a859713b64",
+        "sha256": "01d119895kg5r9inmlq5bnd69pf1jj5qgv4jqfaqmjyq3hibnyf4",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/iohk-nix/archive/37ccc332bf6ce81da265e1004d10827738dc5909.tar.gz",
+        "url": "https://github.com/input-output-hk/iohk-nix/archive/b5309d68dfef014e49301e2b3d6aa0a859713b64.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "js-chain-libs": {
