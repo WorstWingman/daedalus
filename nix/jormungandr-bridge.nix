@@ -13,8 +13,8 @@ in pkgs.runCommandCC "daedalus-bridge" {
   cd $out/bin
   cp ${cardano-wallet.haskellPackages.cardano-wallet-jormungandr.components.exes.cardano-wallet-jormungandr}/bin/cardano-wallet-jormungandr* .
   cp ${cardano-shell.nix-tools.cexes.cardano-launcher.cardano-launcher}/bin/cardano-launcher* .
-  cp ${cardano-wallet.jormungandr-cli}/bin/jcli* .
-  cp ${cardano-wallet.jormungandr}/bin/jormungandr* .
+  cp ${jormungandrLib.packages.master.jcli}/bin/jcli* .
+  cp ${jormungandrLib.packages.master.jormungandr}/bin/jormungandr* .
 
   echo ${cardano-wallet.version} > $out/version
 
