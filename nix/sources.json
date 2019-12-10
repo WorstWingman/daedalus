@@ -61,15 +61,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "iohk-nix": {
-        "branch": "itn_rewards_v1",
+        "branch": "master",
         "description": "nix scripts shared across projects",
         "homepage": null,
         "owner": "input-output-hk",
         "repo": "iohk-nix",
-        "rev": "60c0c007ac06e75e3d8efadd391a6c5318e86b89",
-        "sha256": "0ilk585brflwc0q0758am2wi5qmmhkb8pvc3jwvaxgcz3jsvjbdk",
+        "rev": "861df3d2f72ac3d0916082c3b0ae165539919109",
+        "sha256": "0awj79dhxmm2jfzb4kibqpvvclra65fd7r5w5gsng7cxg6bwxnmv",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/iohk-nix/archive/60c0c007ac06e75e3d8efadd391a6c5318e86b89.tar.gz",
+        "url": "https://github.com/input-output-hk/iohk-nix/archive/861df3d2f72ac3d0916082c3b0ae165539919109.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "js-chain-libs": {
