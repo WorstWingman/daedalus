@@ -83,6 +83,7 @@ let
     launcherLogsPrefix = launcherLogsPrefix.${os};
     cliBin = cliBin.${os};
     workingDir = dataDir.${os};
+    registryUrl = if environment == "selfnode" then null else jormungandrLib.environments.${environment}.registryUrl;
     frontendOnlyMode = true;
     nodeLogPath = null;
     logsPrefix = logsPrefix.${os};
