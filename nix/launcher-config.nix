@@ -5,10 +5,14 @@
 , runCommand
 , lib
 , devShell ? false
+, legacyEnv
 }:
 let
+  jormungandrEnvs = jormungandrLib.environments // {
+    itn_rewards_v1 = legacyEnv;
+  };
   dirSep = if os == "windows" then "\\" else "/";
-  cfg = jormungandrLib.mkConfig jormungandrLib.environments.${environment};
+  cfg = jormungandrLib.mkConfig jormungandrEnvs.${environment};
   jormungandrConfigForCluster = builtins.toFile "jormungandr-config-${environment}.yaml" (builtins.toJSON cfg);
 
   installDirectorySuffix.qa = "QA";
@@ -52,9 +56,9 @@ let
 
   walletArgs = [
     "launch"
-    "--genesis-block-hash" "${jormungandrLib.environments.${environment}.genesisHash}"
+    "--genesis-block-hash" "${jormungandrEnvs.${environment}.genesisHash}"
     "--state-dir" dataDir.${os}
-    "--sync-tolerance" "${jormungandrLib.environments.${environment}.syncTolerance}"
+    "--sync-tolerance" "${jormungandrEnvs.${environment}.syncTolerance}"
     "--random-port"
     "--"
     "--config" finalJormungandrCfgPath

@@ -3,6 +3,7 @@
 let
   sources = import ./nix/sources.nix;
   iohkNix = import sources.iohk-nix { sourcesOverride = sources; };
+  legacyEnv = iohkNix.jormungandrLib.environments.legacy;
   # TODO: can we use the filter in iohk-nix instead?
   cleanSourceFilter = with pkgs.stdenv;
     name: type: let baseName = baseNameOf (toString name); in ! (
@@ -31,5 +32,5 @@ let
   lib = pkgs.lib;
 in
 lib // {
-  inherit sources iohkNix pkgs cardanoSL isDaedalus cleanSourceFilter;
+  inherit sources iohkNix pkgs cardanoSL isDaedalus cleanSourceFilter legacyEnv;
 }

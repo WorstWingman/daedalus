@@ -37,6 +37,7 @@ let
   packages = self: {
     inherit cluster pkgs version target nodeImplementation;
     jormungandrLib = localLib.iohkNix.jormungandrLib;
+    legacyEnv = localLib.legacyEnv;
     daedalus-bridge = self.bridgeTable.${nodeImplementation};
 
     sources = localLib.sources;
@@ -60,6 +61,7 @@ let
 
     launcherConfigs = self.callPackage ./nix/launcher-config.nix {
       inherit (self) jormungandrLib;
+      inherit (self) legacyEnv;
       inherit devShell;
       environment = cluster;
       os = ostable.${target};
