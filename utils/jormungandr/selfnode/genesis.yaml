@@ -4,7 +4,7 @@
 blockchain_configuration:
   # The block0-date defines the date the blockchain starts
   # expected value in seconds since UNIX_EPOCH
-  block0_date: 1556202057
+  block0_date: 1576264417
 
   block_content_max_size: 1024000
 
@@ -22,15 +22,14 @@ blockchain_configuration:
   block0_consensus: genesis_praos
 
   # Number of slots in each epoch
-  slots_per_epoch: 150
-  # ^^ Daedalus specific value!
+  slots_per_epoch: 43200
 
   # The slot duration, in seconds, is the time between the creation
   # of 2 blocks
   slot_duration: 2
 
   # The number of blocks (*10) per epoch
-  epoch_stability_depth: 5
+  epoch_stability_depth: 10
 
   # A list of Ed25519 Extended PublicKey that represents the
   # BFT leaders encoded as bech32. The order in the list matters.
@@ -50,7 +49,7 @@ blockchain_configuration:
     certificate: 42
 
   # The speed to update the KES Key in seconds
-  kes_update_speed: 43200 # 12hours
+  kes_update_speed: 86400 # 12hours
 
   # Set the total reward supply available for monetary creation
   #
